@@ -1,0 +1,63 @@
+<view class="page" style="background-image: url('./img/back2.png'); background-size: cover;">
+  <view class='page-container-classname' ref='saveChildRef0'>
+    <view class='container'>
+      <view class='profile-info'>
+        <image a:if="{{ set_in == true }}" class='avatar' src='./img/down.png'>
+        </image>
+        <image a:if="{{ set_in == false }}" class='avatar' src='./img/about.png'>
+        </image>
+          <view a:if="{{ set_in == false }}" class='info'><text class='name' onTap='getUserInfo'>
+            {{ '请先登录或注册' }}</text>
+          </view>
+          <view a:if="{{ set_in == true }}" class='info'>
+            <text class='name'>Welcome!         {{ name }}</text>
+            <text class="text">开始时间:{{begin}}</text>
+            <text class="text">当前时间:{{end}}</text>
+            <text class="text">本次使用时长(分钟):{{length}}</text>
+          </view>
+      </view>
+    </view>
+  </view>
+  <view a:if="{{ set_in == false }}">
+    <text style="font-size: 18px;"> 用户名 </text>
+    <input class="input"  value="{{name}}"  onInput="bindInput" placeholder="确保记得用户名哟(只可用英文数字)" />
+    <text style="font-size: 18px;"> 密码</text>
+    <input class="input"  value="{{pass}}"  onInput="bindInput2" placeholder="记得密码奥(只可用英文数字)" />
+    <view class="page-b">
+      <button  class="my-button" onTap="reg" type="primary" > 注册 </button>
+      <button  class="my-button" onTap="online" type="primary" > 登录 </button>
+    </view>
+  </view>
+  <view a:if="{{ set_in == true }}"> 
+    <view style="display: flex; align-items: center; justify-content: center; margin-top:20px; margin-bottom: 0px; background:rgba(78, 138, 198, 0.993); padding: 10px;">      <view style="font-size: 16px; font-weight: bold; margin-right: 10px;">近期10次训练趋势</view>
+      <view style="position: relative; padding: 10px;">
+        <canvas id="lineChart" width="100" height="100" style="width:130px;height:80px;"></canvas>
+      </view>
+    </view>
+    <view class="page-b">
+      <button  class="my-button" onTap="addUser" type="primary" > 添加 </button>
+      <button  class="my-button" onTap="logout" type="primary" > 登出 </button>
+    </view>
+    <view style="margin-top: 20rpx">
+      <text class="title"> 您总共已经使用了{{total_length}}分钟, </text>
+      <text class="title">这是您的详细记录</text>
+    </view>
+    <view class="page-section" style="background-image: url('./img/back2.png')">
+      <list radius="{{radius}}">
+        <list-item a:for="{{users}}" >
+          <view style="float:left" >{{item.number}}. {{item.name}} 在{{item.date}} 使用了{{item.length}}分钟</view>
+          <view data-id="{{item['_id']}}" style="float:right;color:#0099FF" onTap="deleteUser" >删除</view>
+        </list-item>
+      </list>
+    </view>
+  </view>
+  <view class="container-b">
+    <image src="/img/ggg.png"/>
+  </view>
+</view>
+<ant-guide-tour
+  items="{{ list }}"
+  visible="{{ swiperVisible }}"
+  onCancel="closeTour"
+  onChange="onChange"
+  swiperable="{{ true }}" />

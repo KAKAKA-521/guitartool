@@ -1,0 +1,338 @@
+.page-container-classname {
+    background: #003b1d;
+    color: #fff;
+    font-family: Menlo, Monaco, Andale Mono, lucida console, Courier New,
+        monospace;
+}
+
+.ctn {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    background-image: url('./img/back.png');
+    background-size: cover; /* 图片等比例缩放并覆盖整个容器 */
+    background-repeat: no-repeat; /* 不重复平铺背景图片 */
+    background-position: center center; /* 图片居中对齐 */
+    background-color: #f0f0f0; /* 背景颜色，可选 */
+    opacity: 0.9; /* 背景图片透明度，可选 */
+    border-radius: 10px; /* 圆角，可选 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* 阴影效果，可选 */
+}
+
+.ctn .main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ctn .bpm-part {
+    text-align: center;
+    margin: 0px 0 40px 0;
+    color:#3b3d3c
+}
+
+.ctn .tips-part {
+    text-align: center;
+    margin-top: 70px;
+}
+
+.ctn .tips-part text.strong {
+    font-weight: bold;
+    color: #fe5d02;
+}
+
+.ctn .bpm-part text {
+    color:#434746;
+    font-size: 30px;
+}
+.ctn .tips-part text {
+    color: #ddd;
+    display: block;
+    line-height: 1.5em;
+}
+
+.ctn .beat-part {
+    margin: 20px 0 -30px;
+}
+
+.ctn .beat-part .circle-out {
+    width: 280px;
+    height: 280px;
+    margin: 0 auto;
+    border-radius: 280px;
+    border: 5px solid #434746;
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    position: relative;
+}
+
+.ctn .beat-part .btn {
+    width: 210px;
+    height: 210px;
+    margin: 0 auto;
+    border-radius: 210px;
+    border: 5px solid #ffffff00;
+    background: #ffffff; /*mean circle colro*/
+    position: relative;
+    z-index: 103;
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+}
+
+.ctn .beat-part .btn .btn-play {
+    text-align: center;
+}
+
+.ctn .beat-part .btn .btn-play .char {
+    font-size: 60px;
+    display: block;
+}
+
+.ctn .beat-part .btn .btn-play .btn-wrap {
+    text-align: center;
+    width: 100%;
+    display: block;
+    margin-bottom: -20px;
+}
+
+.ctn .beat-part .btn .btn-play .btn-s {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    text-align: center;
+    padding: 12px;
+    color: rgb(0, 0, 0);
+}
+
+.ctn .beat-part .btn .btn-play .btn-s.pause {
+    font-size: 12px;
+}
+
+.ctn .beat-part .btn .btn-play .btn-s.stop {
+    font-size: 16px;
+}
+
+.ctn .beat-part .btn .btn-play .btn-inner {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #000000;
+    border-radius: 50%;
+    display: block;
+}
+
+.ctn .beat-part .btn .btn-play .tips {
+    font-size: 12px;
+}
+
+.ctn .beat-part .point {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 99;
+    left: 0;
+    top: 0;
+}
+
+.ctn .beat-part .point .point-bar {
+    width: 3px;
+    height: 80px;
+    margin: 0 auto;
+    display: block;
+    background: #ffffff;
+    box-shadow: 4px 0px 6px 0 rgba(0, 0, 0, 0.55);
+}
+
+.ctn .beat-part .point .point-bar:before {
+    content: "";
+    background: #3b3d3c;
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+    margin-left: -7px;
+    margin-top: -45px;
+    box-shadow: 4px 0px 6px 0 rgba(0, 0, 0, 0.55);
+}
+
+.ctn .beat-part .scale-area {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    top: 0;
+}
+
+.ctn .beat-part .scale-area .scale {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+}
+
+.ctn .beat-part .scale-area .scale:before {
+    margin: 0 auto;
+    background: rgb(255, 255, 255);
+    content: "";
+    display: block;
+    width: 3px;
+    height: 6px;
+}
+
+.ctn .beat-part .scale-area .orange:before {
+    background: #474747;
+}
+
+.ctn .hide {
+    display: none !important;
+}
+
+.rotate-0 {
+    transform: rotate(0deg);
+}
+
+.rotate-45 {
+    transform: rotate(45deg);
+}
+
+.rotate-90 {
+    transform: rotate(90deg);
+}
+
+.rotate-135 {
+    transform: rotate(135deg);
+}
+
+.rotate-180 {
+    transform: rotate(180deg);
+}
+
+.rotate-225 {
+    transform: rotate(225deg);
+}
+
+.rotate-270 {
+    transform: rotate(270deg);
+}
+
+.rotate-315 {
+    transform: rotate(315deg);
+}
+
+.bg-orange {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.page-container-classname-1 {
+  background: #f8f8f8;
+  font-family: Menlo, Monaco, Andale Mono, lucida console, Courier New,
+      monospace;
+}
+
+.ctn-1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.cell {
+  background: #ffffff;
+  display: block;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.cell:last-child {
+  margin-bottom: 20px;
+}
+
+.cell-slider {
+  margin: 0;
+}
+
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+
+.radio-group .radio {
+  width: 33.333%;
+  margin: 5px 0;
+}
+
+.radio-group view {
+  display: block;
+  width: 100%;
+}
+
+.page__hd {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.page__hd text {
+  display: block;
+}
+
+.page__title {
+  text-align: left;
+  font-size: 20px;
+  font-weight: 400;
+  display: block;
+  height: 32px;
+  line-height: 32px;
+}
+
+.page__title text {
+  text-align: right;
+  font-size: 14px;
+  color: #888;
+  float: right;
+}
+
+.page__desc {
+  margin: 10px 0 5px;
+  display: block;
+  color: #888;
+  text-align: left;
+  font-size: 14px;
+}
+
+.radio-group view.radio-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.my-button {
+  width: 180rpx; /* 设置按钮宽度为 100rpx */
+  height: 100rpx; /* 设置按钮高度为 40rpx */
+  margin-top: 80rpx;
+  color: #000000; /* 设置按钮的字为白色 */
+  background-color: #f3ecd7;
+}
+.button-container {
+  display: flex;
+  justify-content: space-between; /* 让按钮在容器内水平平分空间 */
+  padding: 20px;
+}

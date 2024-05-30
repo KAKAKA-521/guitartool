@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "@alipay/faas-web-sdk": "^1.1.8-alpha.6",
+    "antd-mini": "^1.10.6"
+  },
+  "name": "miniprogram",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

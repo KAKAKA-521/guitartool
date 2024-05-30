@@ -1,0 +1,129 @@
+<view class='bg' ref='saveChildRef0' style="background-image: url('./img/back.png'); background-size: cover;  height: 100vh;">
+  <ad adTheme='white' adType='grid' gridCount='{{5}}' gridOpacity='{{0.8}}' unitId='adunit-bb992ff867387384'>
+  </ad>
+  <view class='top'>
+    <btn class="{{type=='guitar'?'current':''}} primary-style mini-style" size='mini' type='primary' onTap='antmoveAction' data-antmove-tap='changeInstrument'>
+      吉他
+    </btn>
+    <btn class="{{type=='violin'?'current':''}} primary-style mini-style" size='mini' type='primary' onTap='antmoveAction' data-antmove-tap='changeViolin'>
+      提琴
+    </btn>
+    <btn class="{{type=='ukulele'?'current':''}} primary-style mini-style" size='mini' type='primary' onTap='antmoveAction' data-antmove-tap='changeUkulele'>
+      尤克
+    </btn>
+    <btn class="{{type=='bass'?'current':''}} primary-style mini-style" size='mini' type='primary' onTap='antmoveAction' data-antmove-tap='changeBass'>
+      贝斯
+    </btn>
+  </view>
+  <view class='instrument'>
+    <text>
+      {{instrumentName}}    </text>
+  </view>  <view class='middle' a:if="{{type=='guitar'}}">
+    <view class='Guitarstring' onTap='antmoveAction' data-antmove-tap='playString'>
+      <btn class="{{showNow=='D4'?'showNow':'notshowNow'}}" data-string='D4'>
+        D
+      </btn>
+      <btn class="{{showNow=='A5'?'showNow':'notshowNow'}}" data-string='A5'>
+        A
+      </btn>
+      <btn class="{{showNow=='E6'?'showNow':'notshowNow'}}" data-string='E6'>
+        E
+      </btn>
+    </view>
+    <image class='guitarImg' mode='aspectFit' src='/images/guitar.png'>
+    </image>
+    <view class='Guitarstring' onTap='antmoveAction' data-antmove-tap='playString'>
+      <btn class="{{showNow=='G3'?'showNow':'notshowNow'}}" data-string='G3'>
+        G
+      </btn>
+      <btn class="{{showNow=='B2'?'showNow':'notshowNow'}}" data-string='B2'>
+        B
+      </btn>
+      <btn class="{{showNow=='E1'?'showNow':'notshowNow'}}" data-string='E1'>
+        E
+      </btn>
+    </view>
+  </view>
+  <view class='middle' a:if="{{type=='violin'}}">
+    <view class='Guitarstring' onTap='antmoveAction' data-antmove-tap='playString'>
+      <btn class="{{showNow=='D'?'showNow':'notshowNow'}}" data-string='D' a:if="{{instrument=='violin'}}">
+        D
+      </btn>
+      <btn class="{{showNow=='G'?'showNow':'notshowNow'}}" data-string='G' a:if="{{instrument=='violin'}}">
+        G
+      </btn>
+      <btn class="{{showNow=='G'?'showNow':'notshowNow'}}" data-string='G' a:if="{{instrument=='viola'}}">
+        G
+      </btn>
+      <btn class="{{showNow=='C'?'showNow':'notshowNow'}}" data-string='C' a:if="{{instrument=='viola'}}">
+        C
+      </btn>
+      <btn class="{{showNow=='G'?'showNow':'notshowNow'}}" data-string='G' a:if="{{instrument=='cello'}}">
+        G
+      </btn>
+      <btn class="{{showNow=='C'?'showNow':'notshowNow'}}" data-string='C' a:if="{{instrument=='cello'}}">
+        C
+      </btn>
+    </view>
+    <image class='guitarImg' mode='aspectFit' src='/images/violin.png'>
+    </image>
+    <view class='Guitarstring' onTap='antmoveAction' data-antmove-tap='playString'>
+      <btn class="{{showNow=='A'?'showNow':'notshowNow'}}" data-string='A' a:if="{{instrument=='violin'}}">
+        A
+      </btn>
+      <btn class="{{showNow=='E'?'showNow':'notshowNow'}}" data-string='E' a:if="{{instrument=='violin'}}">
+        E
+      </btn>
+      <btn class="{{showNow=='D'?'showNow':'notshowNow'}}" data-string='D' a:if="{{instrument=='viola'}}">
+        D
+      </btn>
+      <btn class="{{showNow=='A'?'showNow':'notshowNow'}}" data-string='A' a:if="{{instrument=='viola'}}">
+        A
+      </btn>
+      <btn class="{{showNow=='D'?'showNow':'notshowNow'}}" data-string='D' a:if="{{instrument=='cello'}}">
+        D
+      </btn>
+      <btn class="{{showNow=='A'?'showNow':'notshowNow'}}" data-string='A' a:if="{{instrument=='cello'}}">
+        A
+      </btn>
+    </view>
+  </view>
+  <view class='middle' a:if="{{type=='ukulele'}}">
+    <view class='Guitarstring' onTap='antmoveAction' data-antmove-tap='playString'>
+      <btn class="{{showNow=='C'?'showNow':'notshowNow'}}" data-string='C'>
+        C
+      </btn>
+      <btn class="{{showNow=='G'?'showNow':'notshowNow'}}" data-string='G'>
+        G
+      </btn>
+    </view>
+    <image class='guitarImg' mode='aspectFit' src='/images/ukulele.png'>
+    </image>
+    <view class='Guitarstring' onTap='antmoveAction' data-antmove-tap='playString'>
+      <btn class="{{showNow=='E'?'showNow':'notshowNow'}}" data-string='E'>
+        E
+      </btn>
+      <btn class="{{showNow=='A'?'showNow':'notshowNow'}}" data-string='A'>
+        A
+      </btn>
+    </view>
+  </view>
+  <view class='middle' a:if="{{type=='bass'}}">
+    <view class='Guitarstring' onTap='antmoveAction' data-antmove-tap='playString'>
+      <btn class="{{showNow=='G'?'showNow':'notshowNow'}}" data-string='G'>
+        G
+      </btn>
+      <btn class="{{showNow=='D'?'showNow':'notshowNow'}}" data-string='D'>
+        D
+      </btn>
+      <btn class="{{showNow=='A'?'showNow':'notshowNow'}}" data-string='A'>
+        A
+      </btn>
+      <btn class="{{showNow=='E'?'showNow':'notshowNow'}}" data-string='E'>
+        E
+      </btn>
+    </view>
+    <image class='guitarImg' mode='aspectFit' src='/images/bass.png' style='height:600rpx;'>
+    </image>
+  </view>
+</view>

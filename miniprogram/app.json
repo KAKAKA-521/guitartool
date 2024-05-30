@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/guitar_base/guitar_base",
+    "pages/tool/tool"
+  ],
+  "window": {
+    "titleBarColor": "#3b3d3c",
+    "defaultTitle": "小熊音乐工具箱",
+    "v8WorkerPlugins": "gcanvas_runtime"
+  },
+  "tabBar": {
+    "selectedColor": "#fe5d02",
+    "backgroundColor": "#3b3d3c",
+    "textColor": "#e5e5e5",
+    "items": [
+      {
+        "pagePath": "pages/index/index",
+        "name": "节拍器",
+        "icon": "img/index.png",
+        "activeIcon": "img/index_active.png"
+      },
+      {
+        "pagePath": "pages/guitar_base/guitar_base",
+        "name": "个人练琴时长记录",
+        "icon": "img/about.png",
+        "activeIcon": "img/about_active.png"
+      },
+      {
+        "pagePath": "pages/tool/tool",
+        "name": "调音器",
+        "icon": "img/setting.png",
+        "activeIcon": "img/setting_active.png"
+      }
+    ]
+  }
+}

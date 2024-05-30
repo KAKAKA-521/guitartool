@@ -1,0 +1,9 @@
+{
+  "defaultTitle": "节拍器",
+  "usingComponents": {
+    "popup": "antd-mini/es/Popup/index",
+    "list": "antd-mini/es/List/index",
+    "list-item": "antd-mini/es/List/ListItem/index",
+    "switch": "antd-mini/es/Switch/index"
+  }
+}

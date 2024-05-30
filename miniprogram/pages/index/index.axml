@@ -1,0 +1,133 @@
+<view class='ctn'>
+  <view>
+    <view class='bpm-part'>
+      <text> BPM:{{ bpm }} \n </text>      
+      <text> 节奏型:{{note}} \n </text>
+    </view>    <view class='beat-part'>
+      <view class='circle-out'>
+        <view class='btn' onTap='antmoveAction' data-antmove-tap='startHandle'>
+          <view class='btn-status btn-play'>
+            <view class='char' a:if='{{!isPlay}}'>
+              ▶
+            </view>
+            <view a:elif='{{isPlay}}'>
+              <view class='char'>
+                {{ count }}
+              </view>
+              <view class='btn-wrap'>
+                <view class='btn-s pause' catchTap='antmoveAction' data-antmove-tap='pauseHandle'>
+                  <view class='btn-inner'>
+                    ||
+                  </view>
+                </view>
+                <view class='btn-s stop' catchTap='antmoveAction' data-antmove-tap='stopHandle'>
+                  <view class='btn-inner'>
+                    ■
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class='point' a:if='{{anm === 0}}' style='transform: rotate({{ bar }}deg);   transition: all {{ time/1000 }}s;'>
+          <view class='point-bar'>
+          </view>
+        </view>
+        <view class='point' a:if='{{anm === 1}}' style='transform: rotate({{ bar }}deg);   transition: all {{ time/1000 }}s linear;'>
+          <view class='point-bar'>
+          </view>
+        </view>
+        <view class='point' a:if='{{anm === 2}}' style='transform: rotate({{ bar }}deg);'>
+          <view class='point-bar'>
+          </view>
+        </view>
+        <view class='scale-area'>
+          <view a:key=" " a:for='{{beatArr}}' ref-numbers='{{beatArr}}'>
+            <view a:if='{{item % 90 === 0 }}' class='scale orange' style='transform: rotate({{ item }}deg)'>
+            </view>
+            <view a:else  class='scale' style='transform: rotate({{ item }}deg)'>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="button-container">
+    <button class='my-button' data-position="top" onTap="handleShowBasic">我是设置</button>
+    <button class='my-button' data-position="bottom" onTap="handleShowBasic">我也算是</button>
+  </view>
+</view>
+
+
+<popup visible="{{basicShow}}" autoHeight="{{autoHeight}}" maskClosable="{{maskClosable}}" position="{{position}}" animation="{{animation}}" onClose="handlePopupClose" 
+showCloseIcon="{{showCloseIcon}}">
+  <scroll-view scroll-y='true' style='height: 100%;' >
+    <view class='cell'>
+      <view class='page__hd'>
+        <text class='page__title'>
+          BPM          <text>
+            每分钟节拍数          </text>
+          </text>
+      </view>      <view class='page__bd'>
+        <slider class='cell-slider' left-icon='cancel' right-icon='success_no_circle' value='{{bpm}}' min='{{40}}' max='{{160}}' show-value='true' onChange='bpmchange'>
+        </slider>
+      </view>
+    </view>    <view class='cell' >
+      <view class='page__hd' >
+        <text class='page__title'>
+          拍号          
+        </text>        <text class='page__desc'>
+        </text>
+      </view>      <view class='page__bd' a:if='{{showDetail}}'>
+        <radio-group class='radio-group' onChange='radioChange'>
+          <view a:key=" " a:for='{{detailNotes}}' a:for-item='detailNotesItem' ref-numbers='{{detailNotes}}'>
+            <view class='page__desc'>
+              {{detailNotesItem.name}}
+            </view>
+            <view class='radio-wrap'>
+              <label class='radio' a:key=" " a:for='{{detailNotesItem.lists}}' ref-numbers='{{detailNotesItem.lists}}'>
+                <radio value='{{item}}' checked='{{note === item}}'>
+                </radio>
+                {{item}}
+              </label>
+            </view>
+          </view>
+        </radio-group>
+      </view>
+      <view class='page__bd' a:else >
+        <radio-group class='radio-group' onChange='radioChange'>
+          <label class='radio' a:key=" " a:for='{{notes}}' ref-numbers='{{notes}}'>
+            <radio value='{{item}}' checked='{{note === item}}'>
+            </radio>
+            {{item}}
+          </label>
+        </radio-group>
+      </view>
+    </view>    <view class='cell'>
+      <view class='page__hd'>
+        <text class='page__title'>
+          指针动画
+        </text>
+      </view>
+      <view class='page__bd'>
+        <radio-group class='radio-group' onChange='anmChange'>
+          <label class='radio'>
+            <radio value='{{0}}' checked='{{anm === 0}}'>
+            </radio>
+            节奏感
+          </label>
+          <label class='radio'>
+            <radio value='{{1}}' checked='{{anm === 1}}'>
+            </radio>
+            匀速
+          </label>
+          <label class='radio'>
+            <radio value='{{2}}' checked='{{anm === 2}}'>
+            </radio>
+            跳动
+          </label>
+        </radio-group>
+      </view>
+    </view>
+  </scroll-view>
+</popup>

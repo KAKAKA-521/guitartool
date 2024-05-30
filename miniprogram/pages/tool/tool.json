@@ -1,0 +1,4 @@
+{ 
+  "usingComponents": { "btn": "../../__antmove/component/btn/btn" } ,
+  "defaultTitle": "音准参考"
+}

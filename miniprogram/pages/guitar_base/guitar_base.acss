@@ -1,0 +1,161 @@
+/* app.acss or 对应页面的 acss 文件 */
+.ctn {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  background-image: url('./img/back.png');
+  background-size: cover; /* 图片等比例缩放并覆盖整个容器 */
+  background-repeat: no-repeat; /* 不重复平铺背景图片 */
+  background-position: center center; /* 图片居中对齐 */
+  background-color: #f0f0f0; /* 背景颜色，可选 */
+  opacity: 0.9; /* 背景图片透明度，可选 */
+  border-radius: 10px; /* 圆角，可选 */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* 阴影效果，可选 */
+}
+
+.view {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+}
+
+.text {
+  margin-bottom: 10px;
+  font-size: 100px; /* 调整字体大小 */
+  font-family: 'PingFang SC', 'Helvetica Neue', sans-serif; /* 设置字体样式 */
+  color: rgb(51, 51, 51); /* 设置字体颜色 */
+}
+
+.input {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 10px;
+  padding: 5px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+/* 样式 ACSS */
+.page-section {
+  padding: 10px;
+}
+
+/* 样式 ACSS */
+.title {
+  text-align: center; /* 设置文本居中对齐 */
+  font-size: 18px; /* 调整字体大小 */
+  font-weight: bold; /* 加粗字体 */
+  margin-bottom: 10px; /* 设置底部边距 */
+}
+
+
+.list-item {
+  display: flex;
+  align-items: center; /* 垂直居中 */
+  padding: 10px; /* 调整列表项的内边距 */
+}
+
+.item-text {
+  margin-right: 10px; /* 调整两个元素之间的距离，单位为像素 */
+}
+/* 样式 ACSS */
+.page-b {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.button {
+  width: 90%; /* 控制按钮的宽度，占据页面的 48% 宽度 */
+  height: 40px;
+  font-size: 14px;
+  margin: 0;
+  
+}
+.page-container-classname {
+  height: 100%;
+  width: 100%;
+  background: #f4f4f4;
+}
+
+.container {
+  background: #f4f4f4;
+  height: auto;
+  overflow: hidden;
+  width: 100%;
+}
+
+.profile-info {
+  width: 100%;
+  height: 280rpx;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 30.25rpx;
+  background: rgba(78, 138, 198, 0.993);
+}
+
+.profile-info .avatar {
+  height: 148rpx;
+  width: 148rpx;
+  border-radius: 50%;
+  border: 4rpx solid rgb(0, 0, 0);
+}
+
+.profile-info .info {
+  flex: 1;
+  height: 85rpx;
+  margin-left: 30rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profile-info .name {
+  height: 45rpx;
+  line-height: 45rpx;
+  color: rgb(0, 0, 0);
+  font-size: 37.5rpx;
+  margin-bottom: 30rpx;
+}
+
+.center-image {
+  width: 100%; /* 图片宽度占满父容器 */
+  height: auto; /* 高度自适应 */
+  max-width: 100%; /* 图片最大宽度为父容器宽度 */
+  max-height: 100%; /* 图片最大高度为父容器高度 */
+}
+
+.container-b {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45vh; /* 设置高度以将图像垂直居中 */
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.text {
+  font-size: 16px; /* 设置字体大小为 16px */
+  font-family: 'Arial', sans-serif; /* 设置字体为 Arial */
+  font-weight: bold; /* 设置字体加粗 */
+  margin-bottom: 10px; /* 设置下边距为 10px，实现换行效果 */
+}
+.my-button {
+  width: 180rpx; /* 设置按钮宽度为 100rpx */
+  height: 100rpx; /* 设置按钮高度为 40rpx */
+  margin-top: 80rpx;
+  color: #000000; /* 设置按钮的字为白色 */
+  background-color: #f3ecd7;
+} 
