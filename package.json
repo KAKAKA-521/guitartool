@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "@alipay/faas-web-sdk": "^1.1.8-alpha.6"
+    "@alipay/faas-web-sdk": "^1.1.8-alpha.6",
+    "antd-mini": "^2.31.2"
   }
 }
