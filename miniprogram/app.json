@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/guitar_base/guitar_base",
-    "pages/tool/tool"
+    "pages/tool/tool",
+    "pages/area/area"
   ],
   "window": {
     "titleBarColor": "#3b3d3c",
