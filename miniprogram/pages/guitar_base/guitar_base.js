@@ -489,7 +489,7 @@ Page({
     data: this.data.set_in
     });
   },
-  logout(){ 
+  async logout(){ 
     this.setData({
       name: "",
       pass: "",

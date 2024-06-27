@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/guitar_base/guitar_base",
-    "pages/tool/tool"
+    "pages/tool/tool",
+    "pages/community/community"
   ],
   "window": {
     "titleBarColor": "#3b3d3c",
@@ -31,6 +32,12 @@
         "name": "调音器",
         "icon": "img/setting.png",
         "activeIcon": "img/setting_active.png"
+      },
+      {
+        "pagePath": "pages/community/community",
+        "name": "交流区",
+        "icon": "img/about.png",
+        "activeIcon": "img/about_active.png"
       }
     ]
   }

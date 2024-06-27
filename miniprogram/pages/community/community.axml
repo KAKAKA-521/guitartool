@@ -1,0 +1,37 @@
+<view a:if="{{set_in == true}}">
+  <view class="page" style="background-image: url('./img/back2.png'); background-size: cover;">
+    <view>
+      <view style="text-align: center; padding-top: 10px; padding-bottom: 20px;">
+        <text style="font-size: 20px;">欢迎{{name}}来到讨论区！</text>
+      </view>      
+      <view a:if="{{ad == true}}"style="text-align: center; padding-top: 0px; padding-bottom: 20px;">
+        <text style="font-size: 20px;">您是管理员！</text>
+      </view> 
+      <textarea
+      class="input"
+      style="height: 200rpx; /* 设置初始高度 */"
+      placeholder="请输入发帖内容"
+      onInput="bindInput"
+    ></textarea>
+    <view style="text-align: center; padding-top: 5px; padding-bottom: 0px;">
+      <button 
+          type="primary"
+          onTap="addCom"
+          fill="solid">
+          发帖
+        </button>
+    </view> 
+    </view>
+    </view>    
+      <view class="page-section" style="background-image: url('./img/back2.png')">
+        <list radius="{{radius}}">
+          <list-item a:for="{{coms}}" >
+            <view style="float:left" >昵称：{{item.name}}</view>
+            <view style="float:right" >日期：{{item.date}}</view>
+            <view style="float:left" >内容：{{item.data}}</view>
+            <view data-id="{{item['_id']}}" data-name="{{item.name}}" style="float:right;color:#0099FF" onTap="deleteComs" >删除</view>
+          </list-item>
+        </list>
+      </view>
+  </view>
+<view a:elif="{{set_in == false}}" > 请前往个人页面登录！ </view>

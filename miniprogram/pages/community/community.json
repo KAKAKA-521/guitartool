@@ -1,0 +1,13 @@
+{
+  "defaultTitle": "讨论区",
+  "usingComponents": {
+    "list": "antd-mini/es/List/index",
+    "list-item": "antd-mini/es/List/ListItem/index",
+    "icon": "antd-mini/es/Icon/index",
+    "switch": "antd-mini/es/Switch/index",
+    "ant-button": "antd-mini/es/Button/index",
+    "ant-container": "antd-mini/es/Container/index",
+    "ant-guide-tour": "antd-mini/es/GuideTour/index"
+  },
+  "styleIsolation": "apply-shared"
+}
